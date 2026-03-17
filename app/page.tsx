@@ -72,7 +72,14 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.16),_transparent_35%),linear-gradient(135deg,#081226_0%,#0f172a_55%,#14274a_100%)] text-white">
+      <section className="relative min-h-[90vh] overflow-hidden text-white">
+        {/* Tennis court photo background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url(/images/tennis-hero.png)" }}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(8,18,38,0.88)_0%,rgba(15,23,42,0.82)_50%,rgba(20,39,74,0.78)_100%)]" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute left-10 top-20 h-40 w-40 rounded-full border border-white/20" />
           <div className="absolute right-20 top-28 h-64 w-64 rounded-full border border-white/10" />
